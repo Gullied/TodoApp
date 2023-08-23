@@ -8,8 +8,8 @@ const Todo = ({text, updateIcon, deleteIcon}) => {
 
             <div className="text">{text}</div>
             <div className="icons">
-                <BiEdit className="icons" onClick={updateIcon}/>
-                <AiFillDelete className="icons" onClick={deleteIcon}/>
+                <BiEdit className="icon" onClick={updateIcon}/>
+                <AiFillDelete className="icon" onClick={deleteIcon}/>
                  </div>
         </div>
     )}

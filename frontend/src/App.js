@@ -11,6 +11,8 @@ function App() {
         </div>
         <div className="Todolist">
           <Todo text ="Asc" />
+          <Todo text ="Asc" />
+          <Todo text ="Asc" />
         </div>
       </div>
       
