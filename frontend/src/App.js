@@ -1,3 +1,4 @@
+import Todo from "./component/todo"
 
 function App() {
   return (
@@ -7,6 +8,9 @@ function App() {
         <div className="Top">
           <input type="text" placeholder="Type your Todo..."/>
           <div className="Add">Add</div>
+        </div>
+        <div className="Todolist">
+          <Todo text ="Asc" />
         </div>
       </div>
       
