@@ -20,6 +20,19 @@ const addTodo = (todo,setText,setToDo) => {
         setText("")
         getAllTodos(setToDo)
     })
+    .catch((err)=> console.log(err))
 }
 
-export {getAllTodos, addTodo}
+const updateTodo = (toDoId, todo, setToDo,setText,setIsUpdating) => {
+    axios
+    .put(`${baseUrl}/update/${toDoId}`, { todo})
+    .then((data)=>{
+        console.log(data)
+        setText("")
+        setIsUpdating(false)
+        getAllTodos(setToDo)
+    })
+    .catch((err)=> console.log(err))
+}
+
+export {getAllTodos, addTodo , updateTodo}
