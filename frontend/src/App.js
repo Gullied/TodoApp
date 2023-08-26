@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Todo from "./component/todo"
-import { addTodo, getAllTodos, updateTodo } from "./utils/handleApis";
+import { addTodo, getAllTodos, updateTodo, deleteTodo } from "./utils/handleApis";
 
 function App() {
   const [toDo,setToDo] = useState([])
@@ -34,7 +34,7 @@ function App() {
 
         <div className="Todolist">
 
-        {toDo.map((item) => <Todo key={item._id} text={item.todo} updateIcon= {() => updateIcon(item._id, item.todo) }/>)}
+        {toDo.map((item) => <Todo key={item._id} text={item.todo} updateIcon= {() => updateIcon(item._id, item.todo) } deleteIcon= {()=> deleteTodo(item._id,setToDo)} />)}
 
         </div>
       </div>
