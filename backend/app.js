@@ -1,4 +1,5 @@
 const express = require("express")
+const cors = require("cors")
 const router = require("./routes/todoRoutes")
 const app = express()
 require("dotenv").config()
@@ -12,6 +13,7 @@ const PORT = process.env.PORT
 // Middlewares
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cors())
 app.use(router)
 
 
